@@ -1,0 +1,132 @@
+ 
+
+/* Styles généraux pour le conteneur */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Ajoutez d'autres styles au besoin */
+}
+.btn-container {
+    display: flex;
+    /* Ajoutez d'autres styles au besoin */
+}
+
+/* Styles pour les éléments de type tableau */
+.table-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les tableaux */
+}
+
+/* Styles spécifiques pour chaque tableau */
+.posts-table,
+.suppliers-table,
+.products-table,
+.thirdparties-table {
+    flex: 1; /* Permet à chaque tableau de prendre une part égale de l'espace disponible */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Pour masquer les débordements horizontaux */
+}
+
+/* Styles spécifiques pour les en-têtes de chaque tableau */
+.table-header {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Styles spécifiques pour les cellules d'en-tête de chaque tableau */
+.posts-table th,
+.suppliers-table th,
+.products-table th,
+.thirdparties-table th {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Styles spécifiques pour les lignes de chaque tableau */
+.table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Styles spécifiques pour les boutons de suppression et de modification */
+.delete-btn,
+.edit-btn {
+    display: block; /* Afficher les boutons en tant que blocs pour les empiler verticalement */
+    width: 100%; /* Définir la largeur à 100% pour occuper tout l'espace disponible */
+    margin-bottom: 8px; /* Ajouter une marge en bas pour l'espace entre les boutons */
+    background-color: #d497c7; /* Couleur de fond rouge par défaut */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 8px 20px; /* Espacement intérieur */
+    cursor: pointer; /* Curseur pointeur */
+    border-radius: 5px; 
+    margin-right: 10px;
+    text-decoration: none;/* Bordures arrondies */
+}
+
+/* Style pour le bouton "Modifier" */
+.edit-btn {
+    background-color: #232523; /* Couleur de fond verte */
+    margin-right: 10px; /* Ajoute une marge à droite pour séparer les boutons */
+}
+
+/* Style pour les boutons de suppression et de modification au survol */
+.delete-btn:hover,
+.edit-btn:hover {
+    background-color: #71972f; /* Changement de couleur de fond au survol */
+}
+
+
+/* Style pour le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style pour les en-têtes de colonne */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style pour les cellules de données */
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+/* Style pour les lignes impaires */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+.logout-container {
+  position: fixed;
+  bottom: 20px; /* Ajustez la valeur selon votre préférence */
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+.logout-btn {
+  color: black;
+  text-decoration: none;
+}
+
+  

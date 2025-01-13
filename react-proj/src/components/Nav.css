@@ -1,0 +1,156 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Align elements to the ends */
+  align-items: center; /* Vertically center elements */
+  background-color: #5fb087; /* Navbar background color */
+  padding: 10px 20px; /* Add some padding around elements */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Brand text font size */
+  font-weight: bold; /* Bold for brand text */
+}
+
+.nav-link {
+  color: #0f0e0e; /* Link text color */
+  font-size: 1.1rem; /* Link font size */
+  margin-right: 15px; /* Right margin between links */
+}
+
+.nav-link:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: #121111; /* Link text color on hover */
+}
+
+/* Specific link styling */
+.nav-link.supplier-link {
+  color: #0f0e0e; /* Text color */
+}
+
+/* Additional styling */
+.for-you-text {
+  color: black;
+}
+
+.image-container img {
+  width: 100px; /* Fixed width for the image */
+  height: auto;
+  margin-left: auto; /* Push the logo to the right */
+}
+.image-container {
+  margin-left: auto; /* Push the logo to the right */
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  margin-left: -555px;
+  margin-top: -66px;  /* Espacement entre les liens et le logo */
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-images-container {
+  display: flex;
+  flex-direction: row-reverse; /* Afficher les images de droite à gauche */
+  justify-content: center; /* Pour aligner les images horizontalement */
+  margin-top: 90px; 
+  margin-right: 100px; /* Ajustez la marge supérieure selon vos besoins */
+}
+
+
+
+.product-image {
+  width: 100px; /* Ajustez la largeur des images */
+  margin: 0 10px; /* Espacement horizontal entre les images */
+}
+.bottom-image {
+  width: 100%; /* Assurez-vous que l'image occupe toute la largeur de son conteneur */
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas sa largeur maximale */
+  height: auto; /* Permet à l'image de conserver son aspect ratio lorsqu'elle est redimensionnée */
+}
+
+.img-fluid {
+    /* Largeur maximale souhaitée */
+  height: auto; /* Pour maintenir le rapport hauteur/largeur de l'image */
+  display: block; /* Pour supprimer les marges par défaut de l'image */
+  margin-right: auto; /* Pour aligner l'image à droite */
+  margin-left: auto; /* Pour aligner l'image à gauche */
+  /* Hauteur maximale souhaitée (par exemple) */
+  width: 100%;
+}
+
+.image {
+  width: 100%; /* Définit la largeur de l'image à 100% de son conteneur */
+  height: auto; /* Garde le rapport hauteur/largeur de l'image */
+  display: block; /* Assure que l'image est affichée comme un élément de bloc */
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 30%; /* Chaque produit occupe 30% de la largeur */
+  margin: 1.5%; /* Marge entre les produits */
+  box-sizing: border-box; /* Inclut la bordure et le remplissage dans la largeur et la hauteur */
+}
+
+.product-images-container {
+  display: flex;
+  justify-content: space-between; /* Répartit les images également sur la ligne */
+}
+
+.product-image {
+  width: 30%; /* Largeur de chaque image */
+  height: auto; /* Garde le rapport hauteur/largeur de l'image */
+}
+
+.product-info {
+  padding: 10px; /* Remplissage autour des informations sur le produit */
+  border: 1px solid #ccc; /* Bordure autour des informations sur le produit */
+  margin-top: 10px; /* Marge en haut des informations sur le produit */
+}
+.img {
+  width: 170px; /* Définissez la largeur souhaitée */
+  height: auto; /* Conservez le ratio hauteur/largeur */
+  margin-right: 30px;
+   
+}
+.product-info {
+  text-align: center; /* Aligner le texte au centre */
+  margin-bottom: 20px; /* Ajouter un espace en bas de chaque produit */
+  margin-top: 40px;
+}
+
+.product-info h3 {
+  font-size: 1.2em; /* Définir la taille de la police pour le titre du produit */
+  color: #333; /* Définir la couleur du texte */
+  margin-bottom: 5px; /* Ajouter un espace en bas du titre */
+}
+.product-images-container {
+  width: 200px; /* Définir la largeur souhaitée pour le cadre d'image */
+  height: 200px; /* Définir la hauteur souhaitée pour le cadre d'image */
+  overflow: hidden; /* Cacher tout contenu dépassant de la zone du cadre */
+  margin: 0 auto; /* Centrer le cadre d'image horizontalement */
+}
+
+.product-images-container img {
+  width: 100%; /* Faire en sorte que l'image remplisse la largeur du cadre */
+  height: auto; /* Conserver le ratio hauteur/largeur de l'image */
+}
+
+
+ 

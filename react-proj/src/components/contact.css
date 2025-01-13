@@ -1,0 +1,40 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Bordure arrondie */
+  margin-top: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #5fb087; /* Couleur de la bordure lorsqu'un champ est sélectionné */
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #5fb087;
+  color: #fff;
+  border: none;
+  border-radius: 5px; /* Bordure arrondie */
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #4e936d; /* Changement de couleur au survol */
+}
+input[type="text"][name="user_name"] {
+  margin-top: 20px; /* Ajoute une marge supérieure de 20px */
+}

@@ -1,0 +1,48 @@
+ 
+  
+  /* Style pour les titres */
+  h1, h2 {
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Style pour les listes */
+  ul {
+    list-style-type: none;
+    padding: 10;
+  }
+  
+  /* Style pour chaque produit */
+  .product {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+  
+  /* Style pour les inputs */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style pour le bouton d'achat */
+  .buy-button {
+    margin-top: 20px;
+  }
+  
