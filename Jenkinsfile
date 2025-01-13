@@ -1,48 +1,38 @@
-pipline {
+pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-        IMAGE_NAME_SERVER = 'azza177/server'
-        IMAGE_NAME_SERVER = 'azza177/client'
+        BACKEND_IMAGE = 'azza177/backend:latest'
+        FRONTEND_IMAGE = 'azza177/frontend:latest'
     }
     stages {
-        stage('checkout'){
+        stage('Clone Repository') {
             steps {
-                git branch: 'main',
-                    url : 'https://github.com/azzachitoui17/devops.git';
+                echo 'Cloning the repository'
+                git branch: 'main', url: 'https://github.com/azzachitoui17/devops1.git'
+            }
         }
-    }
-    stage ( 'Build Server Image') {
+        stage('Build Docker Images') {
             steps {
-                dir ( 'app') {
-                    script {
-                        dockerImageServer = docker.build ("${IMAGE_NAME_SERVER}")
-                        }
+                echo 'Building Docker images for backend and frontend'
+                sh """
+                    docker build -t $BACKEND_IMAGE -f ./app/Dockerfile ./app
+                    docker build -t $FRONTEND_IMAGE -f ./react-proj/Dockerfile ./react-proj
+                """
+            }
+        }
+        stage('Push Docker Images') {
+            steps {
+                echo 'Pushing Docker images to Docker Hub'
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                        sh """
+                            echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+                            docker push $BACKEND_IMAGE
+                            docker push $FRONTEND_IMAGE
+                        """
                     }
                 }
-        }
-    stage ( 'Build client Image ') {
-            steps {
-                dir ( 'react-proj') {
-                    script {
-                        dockerImageServer = docker.build ("${IMAGE_NAME_SERVER}")
-                        }
-                    }
-                }
-        }
-    stage ( 'push   Images') {
-            steps {
-                    script {
-                        docker.withRegistry('',"${
-                            DOCKERHUB_CREDENTIALS}") {
-                                dockerImageServer.push()
-                                dockerImageClient.push()
-                        
-                        }
-                    }
-                
+            }
         }
     }
-    }
-    
 }
